@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS-paint</title>
+</head>
+<body>
+
+<div class="paint"></div>
+
+<style>
+    .paint{
+        background-image: url('fallback.png');
+        background-image: paint(awesomePattern);
+    }
+</style>
+
+<script>
+    CSS.paintWorklet.addModule('./worklet.js');
+</script>
+
+
+</body>
+</html>
